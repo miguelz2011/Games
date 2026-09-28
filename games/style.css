@@ -1,0 +1,247 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==============================
+   CABEÇALHO
+================================= */
+
+header {
+    background-color: #151515;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00ff88;
+}
+
+header h1 {
+    color: #00ff88;
+    font-size: 28px;
+}
+
+/* ==============================
+   MENU
+================================= */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+/* ==============================
+   SEÇÃO PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),
+        linear-gradient(135deg, #151515, #003d29);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 20px;
+    color: #dddddd;
+}
+
+/* ==============================
+   BOTÃO
+================================= */
+
+.botao {
+    display: inline-block;
+    background-color: #00ff88;
+    color: #000000;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* ==============================
+   CONTEÚDO
+================================= */
+
+.conteudo {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.conteudo h2,
+.sobre h2,
+.contato h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #00ff88;
+}
+
+/* ==============================
+   CARDS
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00ff88;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #bbbbbb;
+}
+
+/* ==============================
+   SOBRE
+================================= */
+
+.sobre {
+    background-color: #151515;
+    padding: 70px 15%;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: auto;
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* ==============================
+   CONTATO
+================================= */
+
+.contato {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contato p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* ==============================
+   RODAPÉ
+================================= */
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #333333;
+}
+
+footer p {
+    color: #888888;
+    font-size: 14px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo h2,
+    .sobre h2,
+    .contato h2 {
+        font-size: 28px;
+    }
+}
