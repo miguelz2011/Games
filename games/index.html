@@ -1,95 +1,32 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameZone - Mundo dos Games</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GameZone — Jogos</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070b16;color:#f7f8ff}a{text-decoration:none;color:inherit}
+.wrap{width:min(1100px,92%);margin:auto}.top{padding:28px 0 12px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:26px;font-weight:900}.logo span{color:#20e0a5}.hero{padding:55px 0 35px;text-align:center}.hero h1{font-size:clamp(42px,7vw,76px);margin:0 0 15px}.hero p{color:#aab4cc;font-size:18px;max-width:680px;margin:auto;line-height:1.6}.games{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:25px 0 70px}.card{background:#12192a;border:1px solid #26314a;border-radius:20px;overflow:hidden;transition:.2s;cursor:pointer}.card:hover{transform:translateY(-5px);border-color:#20e0a5}.art{height:170px;background:#0c1120;display:grid;place-items:center}.art svg{width:100%;height:100%}.info{padding:18px}.tag{font-size:12px;color:#20e0a5;font-weight:800;text-transform:uppercase}.info h2{margin:7px 0;font-size:23px}.info p{margin:0;color:#aab4cc}.play{display:inline-block;margin-top:15px;background:#7357ff;padding:10px 15px;border-radius:10px;font-weight:800}.modal{display:none;position:fixed;inset:0;background:#000b;place-items:center;padding:18px;z-index:5}.modal.show{display:grid}.box{width:min(760px,100%);background:#101728;border:1px solid #33405e;border-radius:20px;padding:22px;position:relative}.close{position:absolute;right:15px;top:10px;background:none;border:0;color:white;font-size:30px;cursor:pointer}.game{height:360px;background:#070b16;border-radius:14px;overflow:hidden}.game canvas{width:100%;height:100%}.bar{display:flex;justify-content:space-between;color:#aab4cc;padding:12px 0}.btn{border:0;background:#7357ff;color:white;padding:11px 17px;border-radius:10px;font-weight:800;cursor:pointer}@media(max-width:800px){.games{grid-template-columns:1fr 1fr}}@media(max-width:520px){.games{grid-template-columns:1fr}.top nav{display:none}}
+</style>
 </head>
-
 <body>
-
-    <header>
-        <h1>🎮 GameZone</h1>
-
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#games">Games</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
-
-    <main>
-
-        <section id="inicio" class="hero">
-            <div>
-                <h2>Bem-vindo ao mundo dos games!</h2>
-                <p>
-                    Descubra novidades, curiosidades e tudo sobre o universo
-                    dos jogos eletrônicos.
-                </p>
-
-                <a href="#games" class="botao">Explorar Games</a>
-            </div>
-        </section>
-
-        <section id="games" class="conteudo">
-            <h2>🎮 Tipos de Games</h2>
-
-            <div class="cards">
-
-                <article class="card">
-                    <h3>⚔️ Ação</h3>
-                    <p>
-                        Jogos cheios de desafios, combates e muita adrenalina.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>🏎️ Corrida</h3>
-                    <p>
-                        Acelere, supere seus adversários e conquiste a vitória.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>🧙 Aventura</h3>
-                    <p>
-                        Explore mundos incríveis, enfrente desafios e descubra
-                        novas histórias.
-                    </p>
-                </article>
-
-            </div>
-        </section>
-
-        <section id="sobre" class="sobre">
-            <h2>Sobre o GameZone</h2>
-
-            <p>
-                O GameZone é um espaço criado para os apaixonados por games.
-                Aqui você pode conhecer diferentes estilos de jogos e explorar
-                um pouco mais desse universo que reúne diversão, criatividade
-                e tecnologia.
-            </p>
-        </section>
-
-        <section id="contato" class="contato">
-            <h2>📩 Contato</h2>
-
-            <p>
-                Gostou do site? Continue explorando o mundo dos games!
-            </p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 GameZone - Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
-```
+<header class="wrap top"><div class="logo">GAME<span>ZONE</span> 🎮</div><nav><a href="#jogos">Jogos</a></nav></header>
+<main class="wrap">
+<section class="hero"><h1>Escolha. <span style="color:#7357ff">Jogue.</span> Divirta-se.</h1><p>Seis jogos diferentes, cada um com uma mecânica própria e uma ilustração exclusiva. Tudo funciona direto no navegador.</p></section>
+<section id="jogos" class="games">
+<article class="card" onclick="openGame(0)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="70" cy="55" r="48" fill="#ff3d71" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#ff3d71" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">🎯</text></svg></div><div class="info"><span class="tag">AÇÃO</span><h2>Neon Strike</h2><p>Clique nos alvos neon.</p><span class="play">Jogar agora →</span></div></article><article class="card" onclick="openGame(1)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="115" cy="55" r="48" fill="#20e0a5" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#20e0a5" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">⚡</text></svg></div><div class="info"><span class="tag">ARCADE</span><h2>Pixel Rush</h2><p>Desvie dos blocos que caem.</p><span class="play">Jogar agora →</span></div></article><article class="card" onclick="openGame(2)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="160" cy="55" r="48" fill="#7357ff" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#7357ff" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">🧠</text></svg></div><div class="info"><span class="tag">PUZZLE</span><h2>Mind Blocks</h2><p>Encontre os pares escondidos.</p><span class="play">Jogar agora →</span></div></article><article class="card" onclick="openGame(3)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="205" cy="55" r="48" fill="#ffb84d" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#ffb84d" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">♛</text></svg></div><div class="info"><span class="tag">ESTRATÉGIA</span><h2>Empire Grid</h2><p>Conquiste todas as células.</p><span class="play">Jogar agora →</span></div></article><article class="card" onclick="openGame(4)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="250" cy="55" r="48" fill="#20a9ff" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#20a9ff" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">🏎️</text></svg></div><div class="info"><span class="tag">CORRIDA</span><h2>Turbo Kart</h2><p>Pegue moedas e evite obstáculos.</p><span class="play">Jogar agora →</span></div></article><article class="card" onclick="openGame(5)"><div class="art"><svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="170" fill="#0b1020"/><circle cx="295" cy="55" r="48" fill="#d86bff" opacity=".16"/><circle cx="320" cy="120" r="65" fill="#d86bff" opacity=".1"/><text x="200" y="105" text-anchor="middle" font-size="70">👾</text></svg></div><div class="info"><span class="tag">AÇÃO</span><h2>Shadow Arena</h2><p>Sobreviva aos inimigos.</p><span class="play">Jogar agora →</span></div></article>
+</section>
+</main>
+<div class="modal" id="modal"><div class="box"><button class="close" onclick="closeGame()">×</button><h2 id="title"></h2><p id="help"></p><div class="game"><canvas id="cv"></canvas></div><div class="bar"><span>Pontos: <b id="score">0</b></span><span id="time">30s</span></div><button class="btn" onclick="startGame()">Reiniciar</button></div></div>
+<script>
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d"),modal=document.getElementById("modal"),title=document.getElementById("title"),help=document.getElementById("help"),score=document.getElementById("score"),time=document.getElementById("time");let game=0,points=0,seconds=30,timer=0,raf=0,keys={};
+function size(){cv.width=cv.clientWidth;cv.height=cv.clientHeight}function openGame(i){game=i;modal.classList.add("show");startGame()}function closeGame(){clearInterval(timer);cancelAnimationFrame(raf);modal.classList.remove("show")}function add(){points++;score.textContent=points}document.onkeydown=e=>keys[e.key.toLowerCase()]=true;document.onkeyup=e=>keys[e.key.toLowerCase()]=false;
+function startGame(){clearInterval(timer);cancelAnimationFrame(raf);size();points=0;seconds=30;score.textContent=0;time.textContent="30s";["Neon Strike","Pixel Rush","Mind Blocks","Empire Grid","Turbo Kart","Shadow Arena"].forEach((x,i)=>{if(i===game)title.textContent=x});if(game===0)shoot();if(game===1)dodge();if(game===2)memory();if(game===3)grid();if(game===4)kart();if(game===5)arena();timer=setInterval(()=>{seconds--;time.textContent=seconds+"s";if(seconds<=0){clearInterval(timer);cancelAnimationFrame(raf)}},1000)}
+function shoot(){help.textContent="Clique no alvo para marcar pontos.";let x=100,y=100;cv.onclick=e=>{let r=cv.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;if(Math.hypot(mx-x,my-y)<28){add();x=30+Math.random()*(cv.width-60);y=30+Math.random()*(cv.height-60)}};function loop(){ctx.fillStyle="#070b16";ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle="#ff3d71";ctx.beginPath();ctx.arc(x,y,24,0,7);ctx.fill();raf=requestAnimationFrame(loop)}loop()}
+function dodge(){help.textContent="Use A/D ou ←/→ para desviar.";let x=cv.width/2,a=[];function loop(){ctx.clearRect(0,0,cv.width,cv.height);if(keys.a||keys.arrowleft)x-=6;if(keys.d||keys.arrowright)x+=6;x=Math.max(16,Math.min(cv.width-16,x));if(Math.random()<.04)a.push({x:10+Math.random()*(cv.width-20),y:-20});ctx.fillStyle="#20e0a5";ctx.fillRect(x-15,cv.height-45,30,30);ctx.fillStyle="#ff3d71";a.forEach(o=>{o.y+=5;ctx.fillRect(o.x-12,o.y-12,24,24);if(Math.abs(o.x-x)<25&&o.y>cv.height-70)seconds=0});a=a.filter(o=>o.y<cv.height+30);raf=requestAnimationFrame(loop)}loop()}
+function memory(){help.textContent="Clique nas cartas e encontre os 4 pares.";let v=["★","★","◆","◆","●","●","▲","▲"].sort(()=>Math.random()-.5),open=[];cv.onclick=e=>{let r=cv.getBoundingClientRect(),c=Math.floor((e.clientX-r.left)/(cv.width/4)),l=Math.floor((e.clientY-r.top)/(cv.height/2)),i=l*4+c;if(i>7||open.includes(i))return;open.push(i);if(open.length===2){if(v[open[0]]===v[open[1]]){add();open=[]}else setTimeout(()=>open=[],450)}};function loop(){ctx.clearRect(0,0,cv.width,cv.height);v.forEach((z,i)=>{let x=i%4*cv.width/4,y=Math.floor(i/4)*cv.height/2;ctx.fillStyle=open.includes(i)?"#7357ff":"#202a40";ctx.fillRect(x+5,y+5,cv.width/4-10,cv.height/2-10);if(open.includes(i)){ctx.fillStyle="#fff";ctx.font="34px Arial";ctx.textAlign="center";ctx.fillText(z,x+cv.width/8,y+cv.height/4+12)}});raf=requestAnimationFrame(loop)}loop()}
+function grid(){help.textContent="Clique para conquistar as células.";let own=new Set(),C=8,R=5;cv.onclick=e=>{let r=cv.getBoundingClientRect(),c=Math.floor((e.clientX-r.left)/(cv.width/C)),l=Math.floor((e.clientY-r.top)/(cv.height/R)),i=l*C+c;if(!own.has(i)){own.add(i);add()}};function loop(){ctx.clearRect(0,0,cv.width,cv.height);for(let r=0;r<R;r++)for(let c=0;c<C;c++){ctx.fillStyle=own.has(r*C+c)?"#20e0a5":"#202a40";ctx.fillRect(c*cv.width/C+2,r*cv.height/R+2,cv.width/C-4,cv.height/R-4)}raf=requestAnimationFrame(loop)}loop()}
+function kart(){help.textContent="Use A/D ou ←/→. Pegue moedas e evite obstáculos.";let x=cv.width/2,a=[];function loop(){ctx.fillStyle="#070b16";ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle="#202631";ctx.fillRect(cv.width*.25,0,cv.width*.5,cv.height);if(keys.a||keys.arrowleft)x-=6;if(keys.d||keys.arrowright)x+=6;x=Math.max(cv.width*.25+20,Math.min(cv.width*.75-20,x));if(Math.random()<.04)a.push({x:cv.width*.25+20+Math.random()*(cv.width*.5-40),y:-15,coin:Math.random()<.7});a.forEach(o=>{o.y+=5;ctx.fillStyle=o.coin?"#ffd166":"#ff3d71";ctx.beginPath();ctx.arc(o.x,o.y,12,0,7);ctx.fill();if(Math.abs(o.x-x)<25&&Math.abs(o.y-(cv.height-50))<25){if(o.coin)add();else seconds=0}});a=a.filter(o=>o.y<cv.height+20);ctx.fillStyle="#20e0a5";ctx.fillRect(x-18,cv.height-65,36,45);raf=requestAnimationFrame(loop)}loop()}
+function arena(){help.textContent="Use WASD/setas e sobreviva.";let p={x:cv.width/2,y:cv.height/2},en=[];function loop(){ctx.fillStyle="#070b16";ctx.fillRect(0,0,cv.width,cv.height);if(keys.w||keys.arrowup)p.y-=4;if(keys.s||keys.arrowdown)p.y+=4;if(keys.a||keys.arrowleft)p.x-=4;if(keys.d||keys.arrowright)p.x+=4;p.x=Math.max(15,Math.min(cv.width-15,p.x));p.y=Math.max(15,Math.min(cv.height-15,p.y));if(Math.random()<.025)en.push({x:Math.random()*cv.width,y:Math.random()*cv.height});ctx.fillStyle="#20e0a5";ctx.beginPath();ctx.arc(p.x,p.y,15,0,7);ctx.fill();ctx.fillStyle="#d86bff";en.forEach(o=>{let dx=p.x-o.x,dy=p.y-o.y,d=Math.hypot(dx,dy)||1;o.x+=dx/d*1.5;o.y+=dy/d*1.5;ctx.beginPath();ctx.arc(o.x,o.y,12,0,7);ctx.fill();if(Math.hypot(p.x-o.x,p.y-o.y)<24)seconds=0});raf=requestAnimationFrame(loop)}loop()}
+</script>
+</body></html>
